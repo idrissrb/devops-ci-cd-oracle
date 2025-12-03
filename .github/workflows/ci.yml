@@ -25,15 +25,15 @@ jobs:
       - name: Run tests
         run: echo "No tests yet"
 
-      -name: login in to Docker Hub
+      - name: login in to Docker Hub
        uses: docker/login-actions@v3
        with:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      -name: Build Docker image
+      - name: Build Docker image
         run: docker build -t my-ci-cd-app:latest .
 
-      -name: push docker image
+      - name: push docker image
         run: docker push idriss653/my-ci-cd-app:latest
 
