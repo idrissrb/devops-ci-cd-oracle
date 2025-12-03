@@ -32,7 +32,7 @@ jobs:
          password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build Docker image
-        run: docker build -t my-ci-cd-app:latest .
+        run: docker build -t idriss653/my-ci-cd-app:latest .
 
       - name: push docker image
         run: docker push idriss653/my-ci-cd-app:latest
